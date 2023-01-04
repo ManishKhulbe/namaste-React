@@ -1,23 +1,12 @@
 
 import React from "react";
 import ReactDOM, { createRoot } from "react-dom/client";
+import {Header} from './components/header'
 
 
-let title = (
-    <h1>
-        BEST REACT COURSE
-    </h1>
-)
-
-//functional component
 const HeadingComponent = ()=>{
-return (
-    <div>
-    {title}
-        <h2>
-            namaste react
-        </h2>
-    </div>
+return ( 
+    <Header />
 )
 }
 const root = createRoot(document.getElementById('root'));

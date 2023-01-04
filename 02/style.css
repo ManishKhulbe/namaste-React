@@ -1,3 +1,60 @@
-#container{
-    background-color: rgb(86, 123, 155);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html{
+    font-size: 62.5%;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+#header{
+    background-color: #E5E5E5;
+    display: flex;
+    align-items: center;  
+    padding: 1.2rem;
+}
+
+.mainLogo{
+    margin-left: 4rem;
+    height: 5rem; 
+}
+
+.userLogo{
+    margin: 0rem 4rem;
+    height: 3rem;
+}
+
+.searchBar:hover{
+    border-radius: 1.6rem;
+    border-style: none;
+}
+.inputBar:hover{
+    border-radius: 1.6rem;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.inputBar{
+    width: 22rem;
+    padding: 1rem;
+    border-radius: 1.6rem;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+   
+}
+
+
+.searchBar{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.searchIcon{
+    height: 3rem;
+    margin-left: -3.9rem;
 }
