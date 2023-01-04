@@ -2,7 +2,8 @@ import React from "react";
 import manishLogo from "../images/manish-low-resolution-logo-black-on-transparent-background.png";
 import userLogo from "../images/user.png";
 import searchIcon from "../images/search.png";
-const Header = () => {
+
+export default function TodoList() {
   return (
     <div id="header">
       <img src={manishLogo} alt="manish logo" className="mainLogo" />
@@ -16,4 +17,4 @@ const Header = () => {
   );
 };
 
-module.exports = { Header };
+
