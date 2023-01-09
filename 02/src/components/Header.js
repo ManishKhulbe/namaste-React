@@ -1,7 +1,9 @@
 import React from "react";
-import manishLogo from "../images/manish-low-resolution-logo-black-on-transparent-background.png";
-import userLogo from "../images/user.png";
-import searchIcon from "../images/search.png";
+import manishLogo from "../../images/manish-low-resolution-logo-black-on-transparent-background.png";
+import userLogo from "../../images/user.png";
+import searchIcon from "../../images/search.png";
+
+
 
 export default function TodoList() {
   return (
