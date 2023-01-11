@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+#header {
+  background-color: #e5e5e5;
+  display: flex;
+  align-items: center;
+  padding: 0.7rem;
+}
+.section > .container{
+    max-width: 1140px;
+    margin: 2rem auto;
+}
+.sectionBody {
+   
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+.mainLogo {
+  margin-left: 4rem;
+  height: 5rem;
+}
+
+.userLogo {
+  margin: 0rem 4rem 0rem auto;
+  height: 3rem;
+  margin-left: auto;
+}
+
+.searchBar:hover {
+  border-radius: 1.6rem;
+  border-style: none;
+}
+.inputBar:hover {
+  border-radius: 1.6rem;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.inputBar {
+  width: 22rem;
+  padding: 1rem;
+  border-radius: 1.6rem;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  
+}
+.searchIcon {
+  height: 3rem;
+  margin-left: -3.9rem;
+}
+
+
+.restaurantCard {
+  padding: 2rem;
+
+   width: 100%;
+   max-width: 300px;
+   border: 1px solid transparent ;
+
+ 
+}
+.restaurantCard:hover {
+    border: 1px solid #555 ;
+
+}
+.foodImage{
+    /* width: 30rem;
+     */
+     max-width: 100%;
+    margin-bottom: 2.4rem;
+}
+.foodCardDetail{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    justify-content: space-between;
+}
+.cardSection{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
