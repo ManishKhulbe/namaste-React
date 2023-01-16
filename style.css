@@ -71,7 +71,6 @@ body {
 
 .restaurantCard {
   padding: 2rem;
-
    width: 100%;
    max-width: 300px;
    border: 1px solid transparent ;
@@ -98,4 +97,29 @@ body {
     margin-top: 2rem;
     display: flex;
     justify-content: space-between;
+}
+.shimmerCard {
+  margin-top: 4rem;
+  background-image: linear-gradient(to right, #ebebeb calc(50% - 100px), #c5c5c5 50%, #ebebeb calc(50% + 100px));
+  background-size:0;
+  height: 200px;
+  width: 300px;
+  position:relative;
+  overflow:hidden;
+  padding: 5rem;
+}
+.shimmerCard::before {
+  content:"";
+  position:absolute;
+  top:0;
+  right:0;
+  width:calc(200% + 100px);
+  bottom:0;
+  background-image:inherit;
+  animation:move 2s linear infinite; 
+}
+@keyframes move{
+  to {
+    transform:translateX(calc(50% + 100px));
+  }
 }
