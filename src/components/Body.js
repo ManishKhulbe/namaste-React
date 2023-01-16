@@ -21,7 +21,7 @@ export default Body = () => {
         return restaurant;
       }
     });
-    
+
     setFilteredRestaurantList(filteredRestaurant);
   };
 
@@ -61,8 +61,9 @@ export default Body = () => {
         </div>
         <div className="sectionBody">
           
-          {filteredRestaurantList?.length > 0 ? (
-            filteredRestaurantList.map((restaurant) => {
+          {restaurantList?.length > 0 ? (
+
+            filteredRestaurantList.length >0 ?filteredRestaurantList.map((restaurant) => {
               
               return (
                 <RestaurantCard
@@ -76,7 +77,7 @@ export default Body = () => {
                   totalRatingsString={restaurant.data.totalRatingsString}
                 />
               );
-            })
+            }): <h1>No data found </h1>
           ) : (
             <Shimmer />
           )

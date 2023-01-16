@@ -2,8 +2,10 @@ import React from 'react'
 
 const Shimmer = () => {
   return (
-    Array(9).fill(<div  className='shimmerCard'>
-    </div>) 
+    Array(9).fill(null).map((_, index) => (
+        <div key={index} className='shimmerCard'/>
+    ))
+    
   )
 }
 
