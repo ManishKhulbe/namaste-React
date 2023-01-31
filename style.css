@@ -16,6 +16,7 @@ body {
 #header {
   background-color: #e5e5e5;
   display: flex;
+  justify-content:space-between;
   align-items: center;
   padding: 0.7rem;
 }
@@ -36,9 +37,9 @@ body {
 }
 
 .userLogo {
-  margin: 0rem 4rem 0rem auto;
+  margin: 0rem 4rem 0rem 0rem;
   height: 3rem;
-  margin-left: auto;
+  /* margin-left: auto; */
 }
 
 .searchBar:hover {
@@ -122,4 +123,13 @@ body {
   to {
     transform:translateX(calc(50% + 100px));
   }
+}
+
+.nav-ul{
+  display: flex;
+  gap: 2rem;
+}
+.nav-ul >li {
+  list-style: none;
+  font-size: 1.6rem;
 }

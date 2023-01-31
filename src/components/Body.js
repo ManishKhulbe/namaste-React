@@ -26,9 +26,7 @@ export default Body = () => {
   };
 
   useEffect(() => {
-    fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6159783&lng=77.3772303&page_type=DESKTOP_WEB_LISTING"
-    )
+    fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6159783&lng=77.3772303&page_type=DESKTOP_WEB_LISTING")
       .then(async (data) => await data.json())
       .then((parsedData) => {
         setRestaurantList(parsedData?.data?.cards[2]?.data?.data?.cards);
@@ -37,6 +35,7 @@ export default Body = () => {
         );
       });
   } ,[]);
+
 
 
 
