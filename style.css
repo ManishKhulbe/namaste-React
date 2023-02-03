@@ -133,3 +133,30 @@ body {
   list-style: none;
   font-size: 1.6rem;
 }
+
+
+/* restaurantMenu */
+.restaurantMenuContainer{
+  display: flex;
+  margin: 2rem;
+  justify-content: space-evenly;
+}
+
+.restaurantMenu{
+display: flex;
+flex-direction: column;
+gap: 3rem;
+}
+.restaurantAdditional{
+  display: flex;
+  gap: 3rem;
+}
+
+.restaurantMenu > ul{
+  font-size: 1.5rem;
+  font-weight:600
+}
+.restaurantImg{
+  height: 300px;
+  width: 500px
+}
