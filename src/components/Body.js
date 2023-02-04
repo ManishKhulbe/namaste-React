@@ -1,16 +1,21 @@
-import restaurantList from "../constant";
+
 import RestaurantCard from "./RestaurentCard";
 import searchIcon from "../../images/search.png";
 import React, { useEffect, useState } from "react";
 import Shimmer from "../components/Shimmer";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import useIsOnline from "../utils/useIsOnline";
 
 export default Body = () => {
   const [restaurantList, setRestaurantList] = useState([]);
   const [filteredRestaurantList, setFilteredRestaurantList] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  const navigate = useNavigate();
+  const isOnline = useIsOnline()
+
+  if(!isOnline){
+    return (
+      <h1>Opps!! Please check your internet connection</h1>
+    )
+  }
   const handelSearchValue = (e) => {
     setSearchValue(e.target.value);
   };
@@ -27,11 +32,6 @@ export default Body = () => {
     setFilteredRestaurantList(filteredRestaurant);
   };
 
-  const handleClick = (e) => {
-    console.log(e.target)
-    // e.preventDefault();
-    // <Link to={`/restaurant/${restaurant?.data?.id}`}> </Link>;
-  };
   useEffect(() => {
     fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6159783&lng=77.3772303&page_type=DESKTOP_WEB_LISTING"
@@ -46,10 +46,13 @@ export default Body = () => {
       });
   }, []);
 
+  if(!restaurantList) return null;
+
   return (
     <section className="section">
       <div className="container">
         <div className="searchBar">
+        
           <input
             type="text"
             placeholder="Search here"
@@ -64,6 +67,7 @@ export default Body = () => {
             onClick={handelSearch}
           />
         </div>
+      
         <div className="sectionBody">
           {restaurantList?.length > 0 ? (
             filteredRestaurantList.length > 0 ? (
