@@ -7,4 +7,5 @@ const UserContext = createContext({
     }
 })
 
+UserContext.displayName="userContext"
 export default UserContext
