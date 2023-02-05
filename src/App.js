@@ -7,14 +7,19 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
-
+import UserContext from "./utils/UserContext";
 const InstaMart = lazy(() => import("./components/Instamart"));
 
 const AppLayout = () => {
   return (
     <>
+    <UserContext.Provider value={{user:{
+      name :"newname",
+      email :"newEmail@gmail.com"
+    }}}>
       <Header />
       <Outlet />
+    </UserContext.Provider>
     </>
   );
 };

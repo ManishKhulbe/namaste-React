@@ -50,25 +50,25 @@ export default Body = () => {
 
   return (
     <section className="section">
-      <div className="container">
-        <div className="searchBar">
+      <div className="flex flex-col">
+        <div className="flex justify-center m-3">
         
           <input
             type="text"
             placeholder="Search here"
-            className="inputBar"
+            className="border-solid border-2  border-gray-500 rounded-lg"
             value={searchValue}
             onChange={handelSearchValue}
           />
           <img
             src={searchIcon}
             alt="search icon"
-            className="searchIcon"
+            className="w-10 h-10"
             onClick={handelSearch}
           />
         </div>
       
-        <div className="sectionBody">
+        <div className="flex flex-wrap justify-center">
           {restaurantList?.length > 0 ? (
             filteredRestaurantList.length > 0 ? (
               filteredRestaurantList.map((restaurant) => {

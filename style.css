@@ -1,3 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+
 * {
   margin: 0;
   padding: 0;
@@ -39,7 +45,7 @@ body {
 .userLogo {
   margin: 0rem 4rem 0rem 0rem;
   height: 3rem;
-  /* margin-left: auto; */
+  
 }
 
 .searchBar:hover {
@@ -83,8 +89,7 @@ body {
 
 }
 .foodImage{
-    /* width: 30rem;
-     */
+
      max-width: 100%;
     margin-bottom: 2.4rem;
 }
@@ -135,7 +140,6 @@ body {
 }
 
 
-/* restaurantMenu */
 .restaurantMenuContainer{
   display: flex;
   margin: 2rem;
@@ -160,3 +164,4 @@ gap: 3rem;
   height: 300px;
   width: 500px
 }
+ */

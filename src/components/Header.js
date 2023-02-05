@@ -2,35 +2,38 @@ import React from "react";
 import manishLogo from "../../images/manish-low-resolution-logo-black-on-transparent-background.png";
 import userLogo from "../../images/user.png";
 import { Link } from "react-router-dom";
-import useIsOnline from "../utils/useIsOnline"
-
+import useIsOnline from "../utils/useIsOnline";
+import { useContext } from "react";
+import UserContext from "../utils/UserContext";
 export default function Header() {
-
-  const isOnline = useIsOnline()
-
+  const isOnline = useIsOnline();
+  const {user} = useContext(UserContext);
   return (
-    <div id="header">
+    <div
+      id="header"
+      className="flex justify-between bg-gray-200 items-center p-2"
+    >
       <Link to="/">
-      <img src={manishLogo} alt="manish logo" className="mainLogo" />
+        <img src={manishLogo} alt="manish logo" className="h-12 w-10 ml-3" />
       </Link>
-      <div >
-      <ul className="nav-ul">
-        <li>
-          {" "}
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact Us</Link>
-        </li>
-        <li>
-          <Link to="/instamart">InstaMart</Link>
-        </li>
-        
-      </ul>
+      <div>
+        <ul className="flex gap-x-8">
+          <li>
+            {" "}
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact Us</Link>
+          </li>
+          <li>
+            <Link to="/instamart">InstaMart</Link>
+          </li>
+        </ul>
       </div>
-     
-      {isOnline ? '🟢': '🔴'}
-      <img src={userLogo} alt="user logo" className="userLogo" />
+
+      {isOnline ? "🟢" : "🔴"}
+      <h1>{user.name}</h1>
+      <img src={userLogo} alt="user logo" className="w-10 h-10 mr-3" />
     </div>
   );
 }
