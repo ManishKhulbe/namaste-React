@@ -15,7 +15,7 @@ export default RestaurantCard = ({
  
 
   return (
-    <div className="border-solid border-2 m-4">
+    <div className="border-solid border-2 m-4 max-w-xs">
       <Link to={`/restaurant/${id}`} >
       <img
         src={`https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${cloudinaryImageId}`}
@@ -25,7 +25,7 @@ export default RestaurantCard = ({
         </Link>
       <div className="p-2">
         <h3 className="foodName"> {name}</h3>
-        <p className="break-words">{cuisines}</p>
+        <p >{cuisines}</p>
         <h3 className="foodArea">{area} </h3>
       </div>
 
