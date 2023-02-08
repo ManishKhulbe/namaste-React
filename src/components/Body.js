@@ -11,11 +11,7 @@ export default Body = () => {
   const [searchValue, setSearchValue] = useState("");
   const isOnline = useIsOnline()
 
-  if(!isOnline){
-    return (
-      <h1>Opps!! Please check your internet connection</h1>
-    )
-  }
+
   const handelSearchValue = (e) => {
     setSearchValue(e.target.value);
   };
@@ -45,6 +41,13 @@ export default Body = () => {
         );
       });
   }, []);
+
+
+  if(!isOnline){
+    return (
+      <h1>Opps!! Please check your internet connection</h1>
+    )
+  }
 
   if(!restaurantList) return null;
 
