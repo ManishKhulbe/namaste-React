@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+
 import { useParams } from "react-router-dom";
 import { IMG_CDN } from "../constant";
 import Shimmer from "./Shimmer";
@@ -50,7 +50,7 @@ const RestaurantMenu = () => {
                   <li key={items.id}> {items.name}</li>
                   <button
                     className="border-stone-400 bg-slate-300 "
-                    onClick={()=>handleAddItem(item)}
+                    onClick={()=>handleAddItem(items)}
                   >
                     Add item
                   </button>
