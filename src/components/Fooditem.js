@@ -9,7 +9,7 @@ const FoodItem = ({ name, cloudinaryImageId, category, price,  }) => {
       </div>
       <div>
         <h1 className="">Item Name : {name}</h1>
-        <h3>Price : {price}</h3>
+        <h3>Price : ₹{Math.floor(price/100) }  </h3>
         <h3>category : {category}</h3>
       </div>
     </div>

@@ -16,7 +16,7 @@ const cartSlicer = createSlice({
         removeItem : (state, action)=>{
 
         },
-        clearCart :()=>{
+        clearCart :(state)=>{
             state.items=[]
         }
 
@@ -24,5 +24,5 @@ const cartSlicer = createSlice({
 
 })
 
-export const { addItem , editItem , removeItem} = cartSlicer.actions
+export const { addItem , editItem , removeItem ,clearCart} = cartSlicer.actions
 export default cartSlicer.reducer;
