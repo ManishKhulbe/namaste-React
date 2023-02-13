@@ -8,18 +8,27 @@ import About from "./components/About";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+import store from './utils/store'
+import Cart from "./components/Cart";
 const InstaMart = lazy(() => import("./components/Instamart"));
 
 const AppLayout = () => {
   return (
     <>
-    <UserContext.Provider value={{user:{
-      name :"newname",
-      email :"newEmail@gmail.com"
-    }}}>
-      <Header />
-      <Outlet />
-    </UserContext.Provider>
+      <Provider store={store}>
+        <UserContext.Provider
+          value={{
+            user: {
+              name: "newname",
+              email: "newEmail@gmail.com",
+            },
+          }}
+        >
+          <Header />
+          <Outlet />
+        </UserContext.Provider>
+      </Provider>
     </>
   );
 };
@@ -49,11 +58,17 @@ const router = createBrowserRouter([
       {
         path: "/instamart",
         element: (
-          <Suspense fallback={<h1>Please Wait , loading things up for you ... </h1>}>
+          <Suspense
+            fallback={<h1>Please Wait , loading things up for you ... </h1>}
+          >
             <InstaMart />
           </Suspense>
         ),
       },
+      {
+        path:'/cart',
+        element :<Cart />
+      }
     ],
   },
 ]);

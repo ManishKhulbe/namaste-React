@@ -42,6 +42,7 @@ export default Body = () => {
         );
       });
   }
+  
   useEffect(() => {
     getData()
   }, []);

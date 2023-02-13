@@ -5,9 +5,11 @@ import { Link } from "react-router-dom";
 import useIsOnline from "../utils/useIsOnline";
 import { useContext } from "react";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 export default function Header() {
   const isOnline = useIsOnline();
   const {user} = useContext(UserContext);
+  const cartItems = useSelector(store => store.cart.items)
   return (
     <div
       id="header"
@@ -27,6 +29,9 @@ export default function Header() {
           </li>
           <li>
             <Link to="/instamart">InstaMart</Link>
+          </li>
+          <li>
+            <Link to="/cart">cart - {cartItems.length}</Link>
           </li>
         </ul>
       </div>

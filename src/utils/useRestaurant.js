@@ -15,7 +15,7 @@ const [restaurant , setRestaurant ] = useState(null)
 
      useEffect(()=>{
         getRestaurantMenu()
-     })
+     },[])
 
      return restaurant;
 };
